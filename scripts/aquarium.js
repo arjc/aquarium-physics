@@ -51,19 +51,19 @@ const ceil = Bodies.rectangle(window.innerWidth / 2, 0, window.innerWidth, 60, {
 
 World.add(engine.world, [ground, leftWall, rightWall, ceil]);
 
-// Test code.
+// Test
 for (let i = 0; i < 7; i++) {
   const widget = Bodies.rectangle(
     Math.random() * window.innerWidth,
     Math.random() * window.innerHeight,
     Math.random() * (5 - 10) + 100,
     Math.random() * (5 - 10) + 100,
-    { render: { fillStyle: "rgba(255, 255, 255, 0.7)" } }
+    { render: { fillStyle: "rgba(Math.random() * 255, Math.random() * 255, Math.random() * 255, 0.7)" } }
   );
   World.add(engine.world, widget);
 }
 
-// Mouse, stiffness beyond 1.9999 are fkn weak.
+// Mouse, stiffness beyond 1.9999 are weak... pls use responsibly
 const mouse = Mouse.create(render.canvas);
 const mouseConstraint = MouseConstraint.create(engine, {
   mouse: mouse,
@@ -89,21 +89,12 @@ const friends = [
   "Sanmai",
   "Leenex",
   "Aswin",
-  "Vasanth",
-  "Andrew Tate",
-  "Rangu (aka lakshmi)",
   "Fish",
   "Cow",
   "Allah",
-  "Jesus",
-  "Moses",
-  "YHWH",
-  "BUdda",
-  "Blue Avatar people",
-  "ADHD",
   "JIbesh mathematics",
   "Umesh Tution center",
-  "Thomas kutty",
+  "Thomas kutty"
 
 ];
 const fishes = [];
@@ -116,7 +107,7 @@ friends.forEach((name, index) => {
   fish.style.top = `${Math.random() * 100}%`;
   fishTank.appendChild(fish);
 
-  // Hey future me! I tend to forget basic thing here
+  // Hey future me! I tend to forget things here and there
   fishes.push({
     element: fish,
     x: Math.random() * window.innerWidth,
@@ -153,3 +144,4 @@ window.addEventListener("resize", () => {
     Matter.Vector.create(window.innerWidth, window.innerHeight / 2)
   );
 });
+
