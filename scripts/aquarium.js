@@ -90,8 +90,7 @@ const friends = [
   "Leenex",
   "Aswin",
   "Fish",
-  "Cow",
-  "Allah",
+  "Cow",
   "JIbesh mathematics",
   "Umesh Tution center",
   "Thomas kutty"
